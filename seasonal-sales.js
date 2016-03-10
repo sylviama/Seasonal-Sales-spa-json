@@ -8,7 +8,6 @@ categories.addEventListener("load", pushCategories);
 
 function pushCategories(){
   array.push(JSON.parse(categories.responseText));
-  console.log(array);
 }
 
 categories.open("GET", "categories.json");
@@ -21,7 +20,6 @@ products.addEventListener("load", pushProducts);
 
 function pushProducts(){
   array.push(JSON.parse(products.responseText));
-  console.log(array);
 }
 
 products.open("GET", "products.json");
