@@ -4,12 +4,12 @@ products.addEventListener("load", listProducts);
 function listProducts(){
   var productString = "";
   for(var i=0;i<array[1].products.length;i++){
-    productString+="<p>"+array[1].products[i].name+"</p>"+"<p>Price: $"+array[1].products[i].price+"</p>";
+    productString+=`<p>${array[1].products[i].name}</p><p>Price: ${array[1].products[i].price}</p>`;
     
     //loop to find the corresponding department
     for(var j=0;j<array[0].categories.length;j++){
       if(array[1].products[i].category_id===array[0].categories[j].id){
-        productString+="<p>"+array[0].categories[j].name+"</p><br>";
+        productString+=`<p>${array[0].categories[j].name}</p><br>`;
       }
     }
   }
